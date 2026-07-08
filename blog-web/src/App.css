@@ -1,0 +1,34 @@
+body {
+  background: black;
+  margin: 0;
+}
+@layer base {
+  /* 1. target the scrollbar structural container */
+  ::-webkit-scrollbar {
+    width: 10px; /* Width for vertical scrollbars */
+    height: 10px; /* Height for horizontal side scrollbars */
+  }
+
+  /* 2. Style the background track line */
+  ::-webkit-scrollbar-track {
+    background: #000000; /* Perfect match for your pure black background */
+  }
+
+  /* 3. Style the moving drag handle (Thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: #1c1c1e; /* Zinc-900 / dark grey fallback */
+    border-radius: 9999px; /* Fully rounded pills */
+    border: 2px solid #000000; /* Creates an artificial padding effect around the thumb */
+    transition: background 0.2s ease;
+  }
+
+  /* 4. Interactive Hover Effect */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #27272a; /* Lightens up when the cursor hovers over it */
+  }
+
+  /* 5. Active Engagement State */
+  ::-webkit-scrollbar-thumb:active {
+    background: #ff7e67; /* Switches to your custom brand accent color on click/drag */
+  }
+}
