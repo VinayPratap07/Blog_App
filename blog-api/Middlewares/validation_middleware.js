@@ -1,4 +1,4 @@
-async function signUpValidation(req, res) {
+async function signUpValidation(req, res, next) {
   const { fullName, username, email, description, password } = req.body;
   if (
     !fullName.trim() ||

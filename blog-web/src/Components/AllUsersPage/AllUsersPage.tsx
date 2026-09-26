@@ -54,10 +54,10 @@ export default function AllUsersPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {users.map((user: userType) => (
             <div
-              key={user.id}
+              key={user._id}
               className="bg-zinc-950/40 border border-white/5 hover:border-white/10 rounded-2xl p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group relative overflow-hidden"
             >
-              <Link to={`/user/${user.id}`}>
+              <Link to={`/user/${user._id}`}>
                 {/* Subtle card glow on hover */}
                 <div className="absolute -inset-px bg-gradient-to-r from-[#FF7E67]/10 to-[#A78BFA]/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
 
